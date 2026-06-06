@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+ 
+int main(){
+    long long x,n;
+    cout<<"Enter base and exponent: ";
+    cin>> x >> n;
+
+    long long res=1;
+
+    while(n>0){
+        if(n&1){
+            res*=x;
+
+        }
+        x*=x;
+        n=n>>1;
+
+    }
+    cout<< "answer = "<< res;
+    return 0;
+    }
